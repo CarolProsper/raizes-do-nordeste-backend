@@ -1,0 +1,27 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Segredos e variáveis locais
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Editor e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+*.backup

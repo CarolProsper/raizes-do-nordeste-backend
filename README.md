@@ -6,8 +6,6 @@ O Raízes do Nordeste é um sistema backend para centralizar e gerenciar
 operações de uma rede de restaurantes, incluindo clientes, unidades,
 produtos, estoque, pedidos, pagamentos e programa de fidelidade.
 
-O sistema foi desenvolvido com Python, FastAPI e PostgreSQL.
-
 ## 2. Tecnologias utilizadas
 
 - Python 3.12
@@ -23,6 +21,8 @@ O sistema foi desenvolvido com Python, FastAPI e PostgreSQL.
 - Python 3.12 ou compatível
 - PostgreSQL
 - pip
+- Docker
+- Docker Compose
 
 ## 4. Instalação
 
@@ -54,23 +54,23 @@ pip install -r requirements.txt
 
 O projeto utiliza PostgreSQL como banco de dados relacional.
 
-As configurações de conexão são definidas pelas variáveis de ambiente presentes no arquivo `.env`. Para preparar o ambiente local:
+As configurações de conexão são definidas pelas variáveis de ambiente presentes no arquivo .env. Para preparar o ambiente local:
 
-1. Copie `.env.example` para `.env`.
-2. Preencha as credenciais e gere uma chave secreta própria.
-3. Inicie o PostgreSQL com Docker Compose:
+1. Crie o arquivo de configuração:
 
-```bash
+cp .env.example .env
+
+2. Edite o .env e preencha as credenciais locais. Gere uma chave secreta própria para SECRET_KEY e defina uma senha para o usuário de demonstração.
+
+3. Inicie o banco de dados:
+
 docker compose up -d postgres
-```
 
 4. Crie as tabelas definidas nos modelos:
 
-```bash
 python -m app.database.create_tables
-```
 
-Não compartilhe o arquivo `.env` nem utilize credenciais de desenvolvimento em produção.
+Não compartilhe o arquivo .env nem utilize credenciais de desenvolvimento em produção.
 
 ## 6. Executar a aplicação
 

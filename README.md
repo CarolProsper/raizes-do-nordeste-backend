@@ -138,6 +138,7 @@ raizes-do-nordeste-backend/
 │   ├── routers/
 │   ├── schemas/
 │   └── main.py
+├── docs/
 ├── scripts/
 │   └── ajustes_banco.sql
 ├── tests/
@@ -152,7 +153,11 @@ raizes-do-nordeste-backend/
 └── README.md
 
 
-## 11. Observações
+## 11. Documentos Anexados
+
+Documentos como DER, Diagrama de Casos de Uso e Arquivo de Testes no Postman estão arquivados na pasta Docs.
+
+## 12. Observações
 
 - Os pagamentos são simulados; não existe integração real com uma
   operadora ou instituição financeira.
